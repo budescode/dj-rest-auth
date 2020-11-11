@@ -30,6 +30,7 @@ jobs:
       - image: circleci/python:3.8.0
     executor: docker/docker
     steps:
+      - checkout
       - run:
           command: python3 setup.py sdist
           name: Build
@@ -40,4 +41,6 @@ workflows:
   main:
     jobs:
       - test
-      - build
+      - build:
+          requires:
+            - test

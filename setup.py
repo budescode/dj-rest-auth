@@ -31,7 +31,7 @@ setup(
         'djangorestframework>=3.7.0',
     ],
     extras_require={
-        'with_social': ['django-allauth==0.40.0'],
+        'with_social': ['django-allauth>=0.40.0,<0.43.0'],
     },
     tests_require=[
         'unittest-xml-reporting>=3.0.2',
